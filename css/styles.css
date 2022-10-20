@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu Light", sans-serif;
+}
+
+body{
+    background-image: url("../images/background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+.container{
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+.container .header{
+    padding: 10px;
+    text-align: center;
+}
+
+.container .header .closeBtn{
+    float: right;
+    font-size: 35px;
+    color: red;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.container .header .header-text{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .header .header-text h1{
+    font-size: 50px;
+}
+
+.container .header .header-text .underliner{
+    background-color: orangered;
+    width: 70px;
+    height: 4px;
+    border-radius: 5px;
+}
+
+.container .header .header-menus button{
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: 1px solid orangered;
+    color: orangered;
+    font-size: 18px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.container .header .header-menus button:hover{
+    transform: translate(1.05, 1.05);
+    background-color: orangered;
+    color: black;
+}
+
+.container .food-items{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 650px;
+    /* background-color: white; */
+}
+
+.container .food-items .food-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    box-shadow: 5px 5px 35px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+}
+
+.food-items .food-item .food-item-img{
+    width: 100%;
+    height: 60%;
+}
+
+.food-items .food-item .food-item-img img{
+    border-radius: 5px;
+    width: 100%;
+    height: 95%;
+}
+
+.food-item .food-item-details .food-item-details-header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 10px 0;
+}
+
+.food-item .food-item-details .food-item-details-header .name-tag{
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.food-item .food-item-details .food-item-details-header .price-tag{
+    color: orangered;
+    font-size: 22px;
+}
+
+.food-item .food-item-details .food-item-details-text{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.food-item .food-item-details .food-item-details-text #text{
+    font-size: 25px;
+    font-weight: lighter;
+    line-height: 40px;
+}
+
+.hide{
+    display: none;
+}
+
+/* For larger smartphones and tables */
+@media (min-width: 481px) and (max-width: 768px){
+    .container .header .closeBtn{
+        font-size: 45px;
+    }
+    .container .header .header-text h1{
+        font-size: 65px;
+    }
+    .container .header .header-text .underliner{
+        width: 100px;
+    }
+    .container .header .header-menus button{
+        font-size: 26px;
+    }
+    .container .food-items{
+        grid-auto-rows: 800px;
+    }
+    .food-items .food-item .food-item-img{
+        height: 70%;
+        width: 90%;
+        margin-top: 20px;
+    }
+    .food-items .food-item .food-item-img img{
+        height: 85%;
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+    .food-item .food-item-details{
+        padding: 0 30px;
+        margin-bottom: 50px;
+    }
+    .food-item .food-item-details .food-item-details-header .name-tag{
+        font-size: 40px;
+    }
+    .food-item .food-item-details .food-item-details-header .price-tag{
+        font-size: 30px;
+    }
+    .food-item .food-item-details .food-item-details-text #text{
+        font-size: 30px;
+        line-height: 55px;
+    }
+}
+
+/* For laptops, larger tablets in landscape, and small desktops */
+@media (min-width: 769px) and (max-width: 1279px){
+    .container .header .closeBtn{
+        font-size: 45px;
+    }
+    .container .header .header-text h1{
+        font-size: 65px;
+    }
+    .container .header .header-text .underliner{
+        width: 100px;
+    }
+    .container .header .header-menus button{
+        font-size: 26px;
+    }
+    .container .food-items{
+        grid-auto-rows: 800px;
+    }
+    .food-items .food-item .food-item-img{
+        height: 70%;
+        width: 90%;
+        margin-top: 20px;
+    }
+    .food-items .food-item .food-item-img img{
+        height: 85%;
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+    .food-item .food-item-details{
+        padding: 0 30px;
+        margin-bottom: 50px;
+    }
+    .food-item .food-item-details .food-item-details-header .name-tag{
+        font-size: 40px;
+    }
+    .food-item .food-item-details .food-item-details-header .price-tag{
+        font-size: 30px;
+    }
+    .food-item .food-item-details .food-item-details-text #text{
+        font-size: 30px;
+        line-height: 55px;
+    }
+}
+
+/* For Larger desktops and monitors */
+@media (min-width: 1280px){
+    .container{
+        background: rgba(200, 200, 200, 0.85);
+        width: 80%;
+        margin: 0 auto;
+        backdrop-filter: blur(5px);
+    }
+    .container .header .header-text h1{
+        font-size: 60px;
+    }
+    .container .header .header-menus button{
+        font-size: 20px;
+    }
+    .container .food-items{
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 25px;
+        grid-auto-rows: minmax(350px, 500px);
+        margin: 25px 40px;
+    }
+    .container .food-items .food-item{
+        width: 80%;
+        padding: 0;
+        cursor: pointer;
+    }
+    .container .food-items .food-item:hover{
+        transform: scale(1.01, 1.01);
+    }
+    .food-items .food-item .food-item-img{
+        width: 100%;
+    }
+
+    .food-item .food-item-img img{
+        width: 100%;
+    }
+    .food-item .food-item-details .food-item-details-header .name-tag{
+        font-size: 25px;
+    }
+    .food-item .food-item-details .food-item-details-header{
+        padding: 0 10px;
+    }
+    .food-item .food-item-details .food-item-details-header .price-tag{
+        font-size: 20px;
+    }
+    .food-item .food-item-details .food-item-details-text #text{
+        font-size: 18px;
+        padding: 0 10px;
+    }
+}
+

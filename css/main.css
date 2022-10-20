@@ -1,0 +1,493 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu Light", sans-serif;
+}
+
+.container .header .nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.container .header .nav-bar .nav-logo a{
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+}
+
+.container .header .nav-bar .mobile-menu-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container .header .nav-bar .mobile-menu-btn hr{
+    width: 45px;
+    height: 3px;
+    margin: 2px 0;
+    background-color: black;
+}
+
+.container .header .mobile-menu{
+    display: flex-inline;
+    background-color: #4B556B;
+    color: white;
+    flex-direction: column;
+    padding: 10px;
+    text-align: left;
+    border-radius: 5px;
+    z-index: 10;
+    position: absolute;
+    right: 0;
+    box-shadow: 5px 5px 35px rgba(0, 0, 0, 0.15);
+}
+
+.container .header .mobile-menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px;
+    margin: 10px 5px;
+}
+
+.container .header .mobile-menu a:hover{
+    border-radius: 5px;
+    text-decoration: underline;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.main .first{
+    background-color: black;
+    color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+    height: 50%;
+}
+
+.main .first .head{
+    font-size: 40px;
+}
+
+.main .first .sub{
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.main .first .menuBtn{
+    padding: 5px 30px;
+    background-color: hotpink;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.main .second img{
+    width: 100%;
+    height: 50%;
+}
+
+.main .second .detail{
+    position: relative;
+    bottom: 70px;
+    left: 20px;
+    color: white;
+    font-size: 35px;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 20px;
+    border-bottom: 1px solid black;
+    border-radius: 5px;
+}
+
+.main .about{
+    background-color: #4B556B;
+    padding: 50px 15px;
+}
+
+.main .about .head{
+    color: white;
+}
+
+.main .about .head, .main .about .content{
+    margin: 0 10px;
+}
+
+.main .about .content{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+}
+
+.main .about .content span{
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.q1{
+    background-color: #4B556B;
+    color: white;
+    padding: 10px 15px;
+}
+
+.q1 ol{
+    padding: 20px 30px;
+}
+
+.main .form{
+    background-color: #4B556B;
+    padding: 50px 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* text-align: center; */
+}
+
+.main .form .error{
+    font-size: 25px;
+}
+
+.main .form .input-field{
+    width: 100%;
+    margin: 10px 0;
+}
+
+.main .form .input-field input, .main .form .input-field textarea{
+    width: 100%;
+    padding: 10px 5px;
+    border: 1px solid black;
+    border-radius: 5px; 
+    font-size: 18px;
+    resize: none;
+}
+
+.main .form #submitBtn{
+    padding: 10px 30px;
+    font-size: 17px;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.enquiries-main{
+    background: #4B556B;
+    color: white;
+    padding: 20px 15px;
+}
+
+.enquiries-main h1{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.enquiries-main .enquiries{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+}
+
+.enquiries-main .enquiries .enquiry{
+    background-color: white;
+    color: black;
+    padding: 25px 10px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.enquiries .enquiry .name{
+    font-size: 25px;
+    font-weight: bolder;
+    border-bottom: 3px solid black;
+    padding: 0 0 5px 0;
+}
+
+.enquiries .enquiry .content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+
+.enquiries .enquiry .content .text, .enquiries .enquiry .content .response{
+    font-weight: lighter;
+    line-height: 40px;
+}
+
+.enquiries .enquiry .content .text{
+    color: orangered;
+    border-bottom: 1px dotted black;
+}
+
+.enquiries .enquiry .content .response{
+    color: olivedrab;
+    margin: 10px;
+}
+
+.enquiries .enquiry button{
+    padding: 5px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+
+/* For larger smartphones and tables */
+@media (min-width: 481px) and (max-width: 768px){
+    .container .header .nav-bar .nav-logo a{
+        font-size: 45px;
+    }
+    .container .header .mobile-menu a{
+        font-size: 25px;
+    }
+    .main .first .head{
+        font-size: 60px;
+    }
+    .main .first .sub{
+        font-size: 30px;
+    }
+    .main .first .menuBtn{
+        font-size: 25px;
+        padding: 10px 40px;
+    }
+    .main .second .detail{
+        font-size: 45px;
+    }
+    .main .about .head h1{
+        font-size: 50px;
+    }
+    .main .about .content{
+        line-height: 70px;
+    }
+    .main .about .content span{
+        font-size: 30px;
+    }
+    .main .form h1{
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+    .main .form .input-field{
+        width: 80%;
+    }
+    .main .form .input-field input, .main .form .input-field textarea{
+        font-size: 25px;
+        padding: 15px;
+    }
+    .main .form #submitBtn{
+        padding: 15px 50px;
+        font-size: 25px;
+        margin-top: 10px;
+    }
+    .q1 h1{
+        font-size: 50px;
+    }
+    .q1 h3{
+        font-size: 25px;
+        margin-top: 10px;
+    }
+    .q1 ol li{
+        font-size: 25px;
+        margin: 10px 0;
+        font-weight: lighter;
+    }
+}
+
+/* For laptops, larger tablets in landscape, and small desktops */
+@media (min-width: 769px) and (max-width: 1279px){
+    .container .header .nav-bar .nav-logo a{
+        font-size: 45px;
+    }
+    .container .header .mobile-menu a{
+        font-size: 25px;
+    }
+    .main .first .head{
+        font-size: 60px;
+    }
+    .main .first .sub{
+        font-size: 30px;
+    }
+    .main .first .menuBtn{
+        font-size: 25px;
+        padding: 10px 40px;
+    }
+    .main .second .detail{
+        font-size: 45px;
+    }
+    .main .about .head h1{
+        font-size: 50px;
+    }
+    .main .about .content{
+        line-height: 70px;
+    }
+    .main .about .content span{
+        font-size: 30px;
+    }
+    .main .form h1{
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+    .main .form .input-field{
+        width: 80%;
+    }
+    .main .form .input-field input, .main .form .input-field textarea{
+        font-size: 25px;
+        padding: 15px;
+    }
+    .main .form #submitBtn{
+        padding: 15px 50px;
+        font-size: 25px;
+        margin-top: 10px;
+    }
+    .q1 h1{
+        font-size: 50px;
+    }
+    .q1 h3{
+        font-size: 25px;
+        margin-top: 10px;
+    }
+    .q1 ol li{
+        font-size: 25px;
+        margin: 10px 0;
+        font-weight: lighter;
+    }    
+}
+
+.hide{
+    display: none;
+}
+
+/* For Larger desktops and monitors */
+@media (min-width: 1280px){
+    .container .header .nav-bar .nav-logo a{
+        font-size: 45px;
+    }
+    .container .header .mobile-menu{
+        display: none;
+    }
+    .container .header .mobile-menu-btn{
+        display: none;
+    }
+    .container .header .mobile-menu-btn *{
+        display: none;
+    }
+    .container .header .nav-bar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .container .header .nav-bar .nav{
+        display: flex;
+    }
+    .container .header .nav-bar .nav a{
+        color: black;
+        text-decoration: none;
+        font-size: 25px;
+        margin: 0 10px;
+    }
+    .container .header .nav-bar .nav a:hover{
+        text-decoration: underline;
+        color: orangered;
+    }
+    .home{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .main .first{
+        height: 100%;
+    }
+    .main .first *{
+        transform: translate(-50%, -50%);
+        position: relative;
+        top: 50%;
+        left: 40%;
+    }
+    .main .first .head{
+        font-size: 60px;
+    }
+    .main .first .sub{
+        font-size: 30px;
+    }
+    .main .first .menuBtn{
+        font-size: 25px;
+        padding: 10px 40px;
+    }
+    .main .second{
+        display: flex;
+        flex-direction: column;
+    }
+    .main .second img{
+        width: 100%;
+    }
+    .main .second .detail{
+        font-size: 45px;
+        left: 0;
+    }
+    .main .about .head h1{
+        font-size: 50px;
+    }
+    .main .about .content{
+        line-height: 70px;
+    }
+    .main .about .content span{
+        font-size: 30px;
+    }
+    .main .form h1{
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+    .main .form .input-field{
+        width: 80%;
+        max-width: 600px;
+    }
+    .main .form .input-field input, .main .form .input-field textarea{
+        font-size: 25px;
+        padding: 15px;
+    }
+    .main .form #submitBtn{
+        padding: 15px 50px;
+        font-size: 25px;
+        margin-top: 10px;
+    }
+    .q1 h1{
+        font-size: 50px;
+    }
+    .q1 h3{
+        font-size: 25px;
+        margin-top: 10px;
+    }
+    .q1 ol li{
+        font-size: 25px;
+        margin: 10px 0;
+        font-weight: lighter;
+    }
+    .enquiries-main .head{
+        font-size: 40px;
+        text-align: center;
+    }
+    .enquiries-main .enquiries{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .enquiries-main .enquiries .enquiry{
+        width: 90%;
+    }
+}
+
