@@ -4,7 +4,7 @@
   "description": "a simple backend service for the assignemt 4 application",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ngoni Katsidzira",
