@@ -4,8 +4,7 @@
   "description": "a simple backend service for the assignemt 4 application",
   "main": "index.js",
      "engines": {
-    "npm": ">=8.0.0",
-    "node": ">=8.0.0"
+    "node": "11.0.0"
 },
   "scripts": {
     "start": "node index.js",
