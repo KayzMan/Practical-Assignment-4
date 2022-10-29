@@ -41,19 +41,25 @@ app.post('/login', (req, res) => {
     if (!username || !password){
         res.send("<h1 style='color: red;'>Invalid Details</h1>");
     }else{
-        let sql = "SELECT username FROM login WHERE username=? AND password=?";
-        conn.query(sql, [username, password], (err, result) => {
-            if (err){
-                console.log(err);
-                res.send(500, {error: err});
-            }else{
-                if(result.length == 1){
-                    res.json( {msg: "Login Successful"} );
-                }else{
-                    res.json( {msg: "Login Failed"} );
-                }
-            }
-        });
+        if (username ==="admin" && password==="123"){
+           res.json( {msg: "Login Successful"} );;
+        }
+        }else{
+            res.json( {msg: "Login Failed"} );
+        }
+        //let sql = "SELECT username FROM login WHERE username=? AND password=?";
+        //conn.query(sql, [username, password], (err, result) => {
+            //if (err){
+                //console.log(err);
+                //res.send(500, {error: err});
+            //}else{
+               // if(result.length == 1){
+                 //   res.json( {msg: "Login Successful"} );
+             //   }else{
+                 //   res.json( {msg: "Login Failed"} );
+               // }
+           // }
+        //});
     }
 });
 
