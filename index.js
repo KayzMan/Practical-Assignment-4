@@ -43,7 +43,6 @@ app.post('/login', (req, res) => {
     }else{
         if (username ==="admin" && password==="123"){
            res.json( {msg: "Login Successful"} );;
-        }
         }else{
             res.json( {msg: "Login Failed"} );
         }
