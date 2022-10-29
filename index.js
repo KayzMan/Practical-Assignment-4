@@ -4,6 +4,7 @@ const mysql = require("mysql");
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded( { extended: true } ));
+app.use(express.static("."))
 
 // so that data from this API won't be rejected!
 app.use((req, res, next) =>{
@@ -29,11 +30,6 @@ conn.connect(err => {
     else{
             console.log("Connected!");
         }
-});
-
-// Default setup
-app.get("/", (req, res) => {
-    res.send("<h1>Hello, World!</h1>");
 });
 
 // Route for login
