@@ -1,7 +1,7 @@
 let enquiriesDiv = document.querySelector(".enquiries");
 
 async function getEnquiries(){
-    let response = await fetch("http://localhost:3000/enquiries");
+    let response = await fetch("/enquiries");
     let data = await response.json();
     return data.data;
 }
@@ -42,7 +42,7 @@ async function displayEnquiries(){
 async function respondUser(e){
     let name = e.target.id;
     let response = prompt("Response:");
-    await fetch("http://localhost:3000/respond/", {
+    await fetch("/respond", {
         method: "POST",
         body: JSON.stringify({response: response, name: name}),   
         headers: {"Content-Type": "application/json"}
