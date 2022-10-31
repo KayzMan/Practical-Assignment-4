@@ -45,7 +45,7 @@ app.post('/login', (req, res) => {
         conn.query(sql, [username, password], (err, result) => {
             if (err){
                 console.log(err);
-                res.send(500, {error: err});
+                res.status(500).send({error: err});
             }else{
                 if(result.length == 1){
                     res.json( {msg: "Login Successful"} );
