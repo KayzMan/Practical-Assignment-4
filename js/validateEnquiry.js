@@ -83,7 +83,7 @@ function highlightError(field){
 }
 
 async function saveEnquiry(data){
-    let response = await fetch(`http://localhost:3000/save/`, {method: "POST", body: JSON.stringify(data), headers: {
+    let response = await fetch(`/save`, {method: "POST", body: JSON.stringify(data), headers: {
             'Content-Type': 'application/json'}});
     let my_data = await response.json();
     if (my_data.msg.toLowerCase() == "enquiry already made"){
