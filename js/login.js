@@ -9,7 +9,7 @@ async function login(){
     let data = {
         username: username.value, password: password.value
     }
-    let response = await fetch("http://localhost:3000/login", {
+    let response = await fetch("/login", {
         method: 'POST',
         body: JSON.stringify(data),
         headers: { 'Content-Type': "application/json" }
