@@ -17,7 +17,7 @@ app.use((req, res, next) =>{
 
 // Setup mysql and connect
 const conn = mysql.createConnection({
-    host: 'https://www.db4free.net:3306',
+    host: 'db4free.net:3306',
     user: 'ngonikay',
     password: 'ngonikay',
     database: 'enquirydb'
