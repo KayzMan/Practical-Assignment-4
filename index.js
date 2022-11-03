@@ -17,7 +17,7 @@ app.use((req, res, next) =>{
 
 // Setup mysql and connect
 const conn = mysql.createConnection({
-    host: 'http://sql9.freemysqlhosting.net',
+    host: 'sql9.freemysqlhosting.net',
     user: 'sql9537074',
     password: 'RmR7CBXBEG',
     database: 'sql9537074'
