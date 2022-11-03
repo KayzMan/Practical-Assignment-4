@@ -17,7 +17,7 @@ app.use((req, res, next) =>{
 
 // Setup mysql and connect
 const conn = mysql.createConnection({
-    host: 'sql9.freemysqlhosting.net:3306',
+    host: 'http://sql9.freemysqlhosting.net:3306',
     user: 'sql9537074',
     password: 'RmR7CBXBEG',
     database: 'sql9537074'
@@ -25,7 +25,7 @@ const conn = mysql.createConnection({
 
 conn.connect(err => {
     if (err) {
-        console.log("Error: " + err);
+        console.log("Couldn't Connect, Error: " + err);
     }
     else{
             console.log("Connected!");
